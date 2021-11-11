@@ -1,0 +1,64 @@
+@import '../../../styles/variables.scss';
+
+.side-panel {
+  background-color: $gray-100;
+  bottom: 0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  transition: transform 250ms ease-in-out;
+  width: 256px;
+  z-index: $zindex-fixed;
+
+  .side-panel-toggle {
+    position: absolute;
+    transition: transform 250ms ease-in-out;
+    top: 0;
+
+    .btn-icon {
+      .icon-layer {
+        font-size: 9px;
+        left: -1px;
+        top: 9px;
+      }
+    }
+  }
+
+  .side-panel-header {
+    background-color: $gray-100;
+    margin-bottom: 1.625rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .side-panel-body {
+    height: calc(100vh - 2rem);
+    overflow: scroll;
+    white-space: nowrap;
+  }
+
+  &.side-panel--LEFT {
+    left: 0;
+
+    .side-panel-toggle {
+      right: 0;
+    }
+  }
+
+  &.side-panel--RIGHT {
+    right: 0;
+
+    .side-panel-toggle {
+      left: 0;
+    }
+  }
+
+  &.side-panel--collapsed {
+    transform: translateX(-257px);
+
+    &.side-panel--LEFT {
+      .side-panel-toggle {
+        transform: translateX(41px);
+      }
+    }
+  }
+}

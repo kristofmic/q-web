@@ -1,0 +1,20 @@
+@import './variables';
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import '../icons/styles.css';
+
+/*** FONTS ***/
+
+.font-nunito {
+  font-family: $font-family-nunito;
+}
+
+/*** FORMS ***/
+.input-group > .form-control + .btn.btn-outline {
+  border-color: $input-border-color;
+
+  &:hover {
+    background-color: map-get($theme-colors, 'light');
+  }
+}

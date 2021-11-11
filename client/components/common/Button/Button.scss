@@ -1,0 +1,28 @@
+@import '../../../styles/variables.scss';
+
+button.btn {
+  position: relative;
+
+  .loading {
+    align-items: center;
+    display: flex;
+    height: 1.25rem;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  .btn-body {
+    opacity: 1;
+    transition: opacity 100ms linear;
+
+    &.btn-body--entered {
+      opacity: 0;
+    }
+
+    &.btn-body--entering {
+      opacity: 1;
+    }
+  }
+}

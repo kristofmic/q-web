@@ -1,0 +1,23 @@
+{
+  "health": "dev",
+
+  "web": {
+    "host": "http://startr:8888"
+  },
+
+  "db": {
+    "startr": {
+      "host": "localhost"
+    }
+  },
+
+  "token": {
+    "algorithm": "HS256",
+    "key": "I_am_Groot"
+  },
+
+  "tokenCookieOptions": {
+    "secure": true,
+    "domain": "startr.me"
+  }
+}

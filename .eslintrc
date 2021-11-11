@@ -1,0 +1,65 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parser": "@babel/eslint-parser",
+  "extends": ["airbnb", "prettier"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["prettier"],
+  "globals": {
+    "window": true,
+    "document": true,
+    "describe": true,
+    "test": true,
+    "expect": true,
+    "jest": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "beforeAll": true,
+    "afterAll": true,
+    "localStorage": true
+  },
+  "rules": {
+    "consistent-return": 0,
+    "global-require": 0,
+    "import/prefer-default-export": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "no-underscore-dangle": 0,
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": true
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["acc", "accum"]
+      }
+    ],
+    "no-plusplus": 0,
+    "react/forbid-prop-types": 0,
+    "react/destructuring-assignment": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/prop-types": 0,
+    "react/require-default-props": 0,
+    "react/static-property-placement": [1, "static public field"],
+    "react/prefer-stateless-function": 0,
+    "react/sort-comp": 0
+  },
+  "overrides": [
+    {
+      "files": ["*.jsx", "*.js"]
+    }
+  ]
+}

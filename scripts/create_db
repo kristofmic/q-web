@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+const { exec } = require('child_process');
+
+const config = require('../conf/default.json');
+
+const { db } = config;
+Promise.allSettled(
+  Object.values(db).map(
+    ({ name, port }) =>
+      new Promise((resolve, reject) => {
+        exec(
+          `createdb -h localhost -p ${port} ${name}`,
+          (error, stdout, stderr) => {
+            if (error) {
+              console.log(`error: ${error.message}`);
+              return reject(error);
+            }
+
+            if (stderr) {
+              console.log(`stderr: ${stderr}`);
+              return reject(stderr);
+            }
+
+            console.log(`stdout: ${stdout}`);
+            resolve(null);
+          }
+        );
+      })
+  )
+);

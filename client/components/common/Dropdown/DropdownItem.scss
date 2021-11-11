@@ -1,0 +1,29 @@
+@import '../../../styles/variables.scss';
+
+.dropdown-item {
+  background-color: $white;
+  padding: 1rem;
+  transition: background-color 150ms linear, border-color 150ms linear,
+    color 150ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: $gray-200;
+    outline: none;
+  }
+
+  &:active,
+  &:active:focus {
+    background-color: $gray-300;
+    box-shadow: none;
+    color: $gray-900;
+    outline: none;
+    text-decoration: none;
+  }
+
+  &.active {
+    background-color: $gray-900;
+    color: $white;
+    text-decoration: none;
+  }
+}

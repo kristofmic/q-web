@@ -1,0 +1,8 @@
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<% css.forEach(function(bundle) { %> <% if (env === "production") { %>
+<link href="<%= bundle %>" rel="stylesheet" />
+<% } else { %>
+<link href="/public/<%= bundle %>" rel="stylesheet" />
+<% } %> <% }); %>

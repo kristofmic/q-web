@@ -1,0 +1,5 @@
+# /node_modules ignored by default
+.vscode
+dist/
+public/
+test/coverage/

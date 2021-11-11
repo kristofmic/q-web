@@ -1,0 +1,17 @@
+<!-- Scripts
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<% if (localData) { %>
+<script>
+  window.__startr = window.__startr || {};
+
+  window.__startr.localData = '<%- JSON.stringify(localData) %>';
+</script>
+<% } %> <% js.forEach(function(bundle) { %> <% if (env === "production") { %>
+<script type="text/javascript" src="<%= bundle %>" charset="utf-8"></script>
+<% } else { %>
+<script
+  type="text/javascript"
+  src="/public/<%= bundle %>"
+  charset="utf-8"
+></script>
+<% } %> <% }); %>

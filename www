@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+if (process.env.NODE_ENV !== 'production') {
+  require('@babel/register', {
+    cache: true,
+  });
+}
+
+require('./conf')();
+const conf = require('nconf');
+const https = require('https');
+const fs = require('fs');
+
+const { connect } = require('./db/connect');
+const server = require('./server').default;
+const { serverLogger: logger } = require('./server/lib/logger');
+const cleanup = require('./server/lib/utils/cleanup').default;
+
+const port = conf.get('PORT') || 8888;
+
+Promise.all([connect()])
+  .then(() => {
+    let www;
+    if (process.env.NODE_ENV) {
+      www = https
+        .createServer(
+          {
+            key: fs.readFileSync('server.key.pem'),
+            cert: fs.readFileSync('server.cert.pem'),
+          },
+          server
+        )
+        .listen(port, () => {
+          logger.info(`Server listening on port ${port}`);
+        });
+    } else {
+      www = server.listen(port, () => {
+        logger.info(`Server listening on port ${port}`);
+      });
+    }
+
+    cleanup(www);
+  })
+  .catch((err) => {
+    logger.info('Server not started: ', err);
+    process.exit(1);
+  });

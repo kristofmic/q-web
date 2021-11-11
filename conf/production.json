@@ -1,0 +1,25 @@
+{
+  "health": "production",
+
+  "db": {
+    "startr": {
+      "host": "startr.cj1oy44823jx.us-west-1.rds.amazonaws.com",
+      "userEnvVar": "POSTGRES_DB_USERNAME_PROD",
+      "passwordEnvVar": "POSTGRES_DB_PASSWORD_PROD"
+    }
+  },
+
+  "web": {
+    "host": "https://startr.co"
+  },
+
+  "token": {
+    "algorithm": "HS256",
+    "key": "I_am_Groot"
+  },
+
+  "tokenCookieOptions": {
+    "secure": true,
+    "domain": "startr.co"
+  }
+}

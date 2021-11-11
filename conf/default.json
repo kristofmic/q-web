@@ -1,0 +1,15 @@
+{
+  "serverRender": true,
+
+  "db": {
+    "startr": {
+      "name": "startr",
+      "port": 5432
+    }
+  },
+
+  "tokenCookieOptions": {
+    "secure": true,
+    "httpOnly": true
+  }
+}

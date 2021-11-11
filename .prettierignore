@@ -1,0 +1,5 @@
+public/
+test/coverage/
+dist/
+.vscode
+package.json

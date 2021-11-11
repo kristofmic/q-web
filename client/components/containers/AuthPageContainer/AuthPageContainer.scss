@@ -1,0 +1,9 @@
+@import '../../../styles/variables.scss';
+
+#auth-container {
+  padding-bottom: 3rem;
+
+  > .container {
+    padding-top: 72px + 32px;
+  }
+}

@@ -1,0 +1,10 @@
+@import '../../../styles/variables.scss';
+
+#error-container {
+  height: calc(100vh - 72px - 32px);
+  margin-top: calc(72px + 32px);
+
+  .navbar {
+    padding: 1rem;
+  }
+}

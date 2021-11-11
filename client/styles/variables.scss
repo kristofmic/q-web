@@ -1,0 +1,22 @@
+@import '../../node_modules/bootstrap/scss/_functions.scss';
+
+$white: #fff;
+$black: #000;
+
+$font-family-nunito: 'Nunito', sans-serif;
+
+$font-family-sans-serif: $font-family-nunito;
+
+$headings-font-family: $font-family-nunito;
+$headings-font-weight: 700;
+
+@import '../../node_modules/bootstrap/scss/_variables.scss';
+
+$spacers: map-merge(
+  $spacers,
+  (
+    6: (
+      $spacer * 4,
+    ),
+  )
+);
