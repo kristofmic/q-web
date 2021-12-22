@@ -38,7 +38,8 @@ const Button = forwardRef((props, ref) => {
       {...rest}
       disabled={disabled}
       onClick={handleClick}
-      ref={ref}>
+      ref={ref}
+    >
       <Transition in={loading} timeout={LOADING_DURATION}>
         {(state) => (
           <>

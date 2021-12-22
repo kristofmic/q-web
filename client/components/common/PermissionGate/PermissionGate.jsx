@@ -52,7 +52,8 @@ export default function PermissionGate(props) {
             ) : (
               <Link
                 className="btn btn-secondary btn-block"
-                to={secondaryLinkTo}>
+                to={secondaryLinkTo}
+              >
                 {secondaryLinkText}
               </Link>
             )}

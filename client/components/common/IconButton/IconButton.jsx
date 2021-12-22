@@ -32,14 +32,16 @@ const IconButton = React.forwardRef((props, ref) => {
       className={tooltipClassName}
       disabled={tooltipDisabled || disabled}
       placement={tooltipPlacement}
-      text={tooltipText}>
+      text={tooltipText}
+    >
       {({ tooltipId }) => (
         <Button
           aria-describedby={tooltipId}
           className={cx('btn btn-icon', className)}
           disabled={disabled}
           ref={ref}
-          {...rest}>
+          {...rest}
+        >
           {loading ? (
             <CircularProgress />
           ) : (

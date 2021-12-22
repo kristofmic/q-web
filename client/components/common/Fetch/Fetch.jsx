@@ -32,21 +32,18 @@ export default function Fetch(props) {
 
   return (
     <div {...rest}>
-      {status === API_STATUS.LOADING && <>{loader}</>}
-      {status === API_STATUS.ERROR && (
-        <>
-          {renderError({
-            errorMessage,
-            onRetry: handleRetry,
-            status,
-          }) || (
-            <ErrorMessage onRetry={handleRetry}>
-              {errorMessage ||
-                'Oops! Something went wrong. Please wait a moment and try again.'}
-            </ErrorMessage>
-          )}
-        </>
-      )}
+      {status === API_STATUS.LOADING && loader}
+      {status === API_STATUS.ERROR &&
+        (renderError({
+          errorMessage,
+          onRetry: handleRetry,
+          status,
+        }) || (
+          <ErrorMessage onRetry={handleRetry}>
+            {errorMessage ||
+              'Oops! Something went wrong. Please wait a moment and try again.'}
+          </ErrorMessage>
+        ))}
       {status === API_STATUS.SUCCESS && children()}
     </div>
   );

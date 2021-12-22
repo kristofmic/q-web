@@ -79,12 +79,6 @@ export class AuthPage extends React.Component {
     return variant === VARIANT.LOGIN;
   }
 
-  get isSignup() {
-    const { variant } = this.props;
-
-    return variant === VARIANT.SIGNUP;
-  }
-
   handleEmailLogin = (email, password) => {
     const { loginWithEmail } = this.props;
 

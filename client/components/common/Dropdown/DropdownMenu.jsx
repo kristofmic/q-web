@@ -21,7 +21,8 @@ export default function DropdownMenu(props) {
         className
       )}
       aria-labelledby={labelledBy}
-      {...rest}>
+      {...rest}
+    >
       {children}
     </div>
   );

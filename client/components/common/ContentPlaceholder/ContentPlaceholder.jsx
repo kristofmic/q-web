@@ -16,7 +16,8 @@ export default function ContentPlaceholder(props) {
     <svg
       className={cx(className, 'content-placeholder')}
       style={svgStyle}
-      version="1.1">
+      version="1.1"
+    >
       <rect
         style={{ fill: `url(#${gradientID})` }}
         clipPath={`url(#${clipID})`}

@@ -16,7 +16,8 @@ export default function Icon(props) {
       className={cx('d-inline-flex', className, {
         'icon-layered': _icons.length > 1,
       })}
-      {...rest}>
+      {...rest}
+    >
       {_icons.map((i, idx) => (
         <i
           className={cx('icon', i, {

@@ -137,7 +137,8 @@ export default class Popover extends React.PureComponent {
       <Transition
         in={isVisible}
         timeout={transitionDuration}
-        {...TransitionProps}>
+        {...TransitionProps}
+      >
         {(state) => {
           const entered = state === TRANSITION_KEYS.ENTERED;
           const exited = state === TRANSITION_KEYS.EXITED;
@@ -175,7 +176,8 @@ export default class Popover extends React.PureComponent {
               ref={this.popoverRef}
               role="tooltip"
               style={this.popoverPosition}
-              {...rest}>
+              {...rest}
+            >
               {arrow && <div className="arrow" />}
               {children}
             </div>

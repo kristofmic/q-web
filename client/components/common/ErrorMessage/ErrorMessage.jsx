@@ -13,13 +13,14 @@ export default function ErrorMessage(props) {
       className={cx(
         'error-message d-flex flex-column align-items-center p-3',
         className
-      )}>
+      )}
+    >
       {typeof children === 'string' ? (
         <p className="text-danger text-center text-wrap">
           <strong>{children}</strong>
         </p>
       ) : (
-        <>{children}</>
+        children
       )}
       {onRetry && (
         <Button className="btn btn-danger" onClick={onRetry}>

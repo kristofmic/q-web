@@ -16,7 +16,8 @@ export default function SelectAuth(props) {
         <div className="d-grid gap-3">
           <Button
             className="btn btn-outline-primary"
-            onClick={onGoogleContinue}>
+            onClick={onGoogleContinue}
+          >
             <GoogleG className="me-2" height="24" />
             {isLogin ? 'Sign in' : 'Continue'} with Google
           </Button>
@@ -25,7 +26,8 @@ export default function SelectAuth(props) {
             to={{
               pathname: isLogin ? 'email' : 'email',
               search: location.search,
-            }}>
+            }}
+          >
             {isLogin ? 'Sign in' : 'Continue'} with Email
           </Link>
         </div>

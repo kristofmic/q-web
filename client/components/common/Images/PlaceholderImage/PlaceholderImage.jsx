@@ -24,7 +24,8 @@ export default function PlaceholderImage(props) {
       height={height}
       xmlns="https://www.w3.org/2000/svg"
       viewBox={`0 0 ${width} ${height}`}
-      preserveAspectRatio="none">
+      preserveAspectRatio="none"
+    >
       <g>{svgComponent}</g>
     </svg>
   );

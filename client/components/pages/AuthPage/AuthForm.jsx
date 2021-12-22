@@ -181,7 +181,8 @@ export default class AuthForm extends React.Component {
                 <div
                   className={cx('input-group', {
                     'has-validation': password.error,
-                  })}>
+                  })}
+                >
                   <input
                     className={cx('form-control', {
                       'is-invalid': password.error,
@@ -198,7 +199,8 @@ export default class AuthForm extends React.Component {
                   />
                   <Button
                     className="btn btn-outline"
-                    onClick={this.togglePasswordVisibility}>
+                    onClick={this.togglePasswordVisibility}
+                  >
                     <Icon
                       icon={cx({
                         'icon-visible-outlined': password.visible,
@@ -221,7 +223,8 @@ export default class AuthForm extends React.Component {
                   className="btn btn-primary"
                   disabled={isLoading}
                   loading={isLoading}
-                  type="submit">
+                  type="submit"
+                >
                   Continue
                 </Button>
               </div>

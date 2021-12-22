@@ -57,7 +57,8 @@ export default function AppBar(props) {
                 logoutStatus === API_STATUS.LOADING ||
                 logoutStatus === API_STATUS.SUCCESS
               }
-              onClick={onLogout}>
+              onClick={onLogout}
+            >
               {`Log out (${userEmail})`}
             </Button>
           </li>
@@ -67,7 +68,8 @@ export default function AppBar(props) {
       <CSSTransition
         classNames="mobile-nav"
         in={isMobileNavVisible}
-        timeout={200}>
+        timeout={200}
+      >
         <div className="navbar-nav mobile-nav bg-light">
           <IconButton
             className="navbar-toggler border-0"
@@ -87,7 +89,8 @@ export default function AppBar(props) {
                   logoutStatus === API_STATUS.LOADING ||
                   logoutStatus === API_STATUS.SUCCESS
                 }
-                onClick={onLogout}>
+                onClick={onLogout}
+              >
                 {`Log out (${userEmail})`}
               </Button>
             </li>

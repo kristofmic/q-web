@@ -97,7 +97,8 @@ export default class Tooltip extends React.PureComponent {
           baseClassName="tooltip"
           isVisible={isVisible}
           placement={placement}
-          transitionDuration={transitionDuration}>
+          transitionDuration={transitionDuration}
+        >
           <div className="tooltip-inner">{text}</div>
         </Popover>
         {/* eslint-disable-next-line */}
@@ -108,7 +109,8 @@ export default class Tooltip extends React.PureComponent {
           onFocus={show}
           onMouseEnter={show}
           onMouseLeave={hide}
-          ref={this.setChildRef}>
+          ref={this.setChildRef}
+        >
           {children({ hide, show, tooltipId })}
         </span>
       </>

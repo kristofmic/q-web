@@ -93,7 +93,8 @@ export default class SidePanel extends React.Component {
       <div
         className={cx(`side-panel side-panel--${position}`, className, {
           'side-panel--collapsed': isCollapsed,
-        })}>
+        })}
+      >
         <IconButton
           iconClassName={cx('d-inline-block', {
             flip:
@@ -109,7 +110,8 @@ export default class SidePanel extends React.Component {
         {header && (
           <div
             className="side-panel-header d-flex flex-column align-items-center"
-            ref={this.headerRef}>
+            ref={this.headerRef}
+          >
             {header}
           </div>
         )}

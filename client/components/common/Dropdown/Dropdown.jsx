@@ -61,7 +61,8 @@ export default function Dropdown(props) {
         className
       )}
       ref={dropdownRef}
-      {...rest}>
+      {...rest}
+    >
       <ButtonComponent
         aria-haspopup="true"
         aria-expanded={String(show)}
